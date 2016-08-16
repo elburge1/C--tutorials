@@ -13,7 +13,8 @@ namespace FirstConsoleProject
 			num01 = Convert.ToInt32 (Console.ReadLine());
 			Console.Write("Type another number");
 			num02 = Convert.ToInt32(Console.ReadLine());
-			Console.WriteLine("The result is " + num01 * num02);
+			Console.WriteLine(num01 + " divided by " + num02 + " gives the result " + num01 / num02);
+			Console.ReadKey();
 		}
 	}
 }
