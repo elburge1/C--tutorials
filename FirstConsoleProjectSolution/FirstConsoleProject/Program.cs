@@ -6,14 +6,19 @@ namespace FirstConsoleProject
 	{
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
-			double num01;
-			double num02;
-
-			Console.Write("Type a number to be divided ");
-			num01 = Convert.ToDouble (Console.ReadLine());
-			Console.Write("Type another number ");
-			num02 = Convert.ToDouble(Console.ReadLine());
-			Console.WriteLine(num01 + " divided by " + num02 + " gives the result " + num01 / num02);
+			Console.WriteLine("How old are you?");
+			int age = Convert.ToInt32(Console.ReadLine());
+			if (age < 18)
+			{
+				Console.WriteLine("That's too bad. You will have to wait a couple of years.");
+			}
+			else if (age == 18)
+			{
+				Console.WriteLine("Phew! Barely made it!");
+			}
+			else {
+				Console.WriteLine("You are allowed to enter!");
+			}
 			Console.ReadKey();
 		}
 	}
