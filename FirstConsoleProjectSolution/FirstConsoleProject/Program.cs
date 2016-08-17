@@ -6,9 +6,12 @@ namespace FirstConsoleProject
 	{
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
-			for (int i = 1; i <= 10; i++)
+			for (int i = 0; i <= 100; i++)
 			{
-				Console.WriteLine(i);
+				if (i % 2 == 0)
+				{
+					Console.WriteLine(i);
+				}
 			}
 			Console.ReadKey();
 		}
