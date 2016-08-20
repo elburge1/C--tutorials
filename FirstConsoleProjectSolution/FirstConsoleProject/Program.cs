@@ -6,13 +6,14 @@ namespace FirstConsoleProject
 	{
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
-			Add(4, 8);
+			int result = Add(4, 8);
+			Console.WriteLine(result);
 			Console.ReadKey();
 		}
 
-		public static void Add(int num01, int num02)
+		public static int Add(int num01, int num02)
 		{
-			Console.WriteLine(num01 + num02);
+			return num01 + num02;
 		}
 	}
 }
