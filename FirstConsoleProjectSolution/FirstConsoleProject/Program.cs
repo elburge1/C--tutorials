@@ -7,7 +7,13 @@ namespace FirstConsoleProject
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
 			int result = Add(4, 8);
-			Console.WriteLine(result);
+			if (result > 10)
+			{
+				Console.WriteLine("The result is larger than 10!");
+			}
+			else {
+				Console.WriteLine("The result is smaller than 10!");
+			}
 			Console.ReadKey();
 		}
 
