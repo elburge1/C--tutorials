@@ -13,7 +13,7 @@ namespace FirstConsoleProject
 			numbers.Add(4);
 			numbers.Add(25);
 
-			numbers.RemoveAt(1);
+			numbers.Remove(4);
 
 			for (int i = 0; i < numbers.Count; i++)
 			{
