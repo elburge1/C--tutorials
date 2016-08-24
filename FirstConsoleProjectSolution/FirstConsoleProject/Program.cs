@@ -11,8 +11,10 @@ namespace FirstConsoleProject
 			numbers[1] = 3;
 			numbers[2] = 5;
 
-			Console.WriteLine(numbers[1]);
-
+			for (int i = 0; i < numbers.Length; i++)
+			{
+				Console.Write(numbers[i]);
+			}
 
 			Console.ReadKey();
 		}
