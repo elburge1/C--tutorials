@@ -11,9 +11,9 @@ namespace FirstConsoleProject
 			numbers[1] = 3;
 			numbers[2] = 5;
 
-			for (int i = 0; i < numbers.Length; i++)
+			foreach (int number in numbers)
 			{
-				Console.Write(numbers[i]);
+				Console.Write(number + ", ");
 			}
 
 			Console.ReadKey();
