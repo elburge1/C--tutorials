@@ -6,20 +6,15 @@ namespace FirstConsoleProject
 	{
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
-			int result = Add(4, 8);
-			if (result > 10)
-			{
-				Console.WriteLine("The result is larger than 10!");
-			}
-			else {
-				Console.WriteLine("The result is smaller than 10!");
-			}
-			Console.ReadKey();
-		}
+			int[] numbers = new int[5];
+			numbers[0] = 12;
+			numbers[1] = 3;
+			numbers[2] = 5;
 
-		public static int Add(int num01, int num02)
-		{
-			return num01 + num02;
+			Console.WriteLine(numbers[1]);
+
+
+			Console.ReadKey();
 		}
 	}
 }
