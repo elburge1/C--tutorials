@@ -13,7 +13,12 @@ namespace FirstConsoleProject
 			numbers.Add(4);
 			numbers.Add(25);
 
-			Console.WriteLine(numbers[2]);
+			numbers.RemoveAt(1);
+
+			for (int i = 0; i < numbers.Count; i++)
+			{
+				Console.WriteLine(numbers[i]);
+			}
 
 			Console.ReadKey();
 		}
