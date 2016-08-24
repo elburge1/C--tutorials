@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace FirstConsoleProject
 {
@@ -6,15 +7,13 @@ namespace FirstConsoleProject
 	{
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
-			string[] names = new string[3]
-			{
-				"Tom", "Mark", "Matt"
-			};
+			List<int> numbers = new List<int>();
 
-			foreach (string name in names)
-			{
-				Console.WriteLine(name);
-			}
+			numbers.Add(13);
+			numbers.Add(4);
+			numbers.Add(25);
+
+			Console.WriteLine(numbers[2]);
 
 			Console.ReadKey();
 		}
