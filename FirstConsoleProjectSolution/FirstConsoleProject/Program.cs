@@ -5,10 +5,9 @@ namespace FirstConsoleProject
 {
 	class Animal
 	{
-		string name = "Spotty";
-		int age = 6;
-		float happiness = 0.5f;
-
+		public string name = "Spotty";
+		public int age = 6;
+		public float happiness = 0.5f;
 	}
 
 	class MainClass
@@ -16,6 +15,8 @@ namespace FirstConsoleProject
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
 			//classes
+			Animal dog = new Animal();
+			Console.WriteLine(dog.name);
 
 			Console.ReadKey();
 		}
