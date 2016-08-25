@@ -8,6 +8,13 @@ namespace FirstConsoleProject
 		public string name = "Spotty";
 		public int age = 6;
 		public float happiness = 0.5f;
+
+		public void Print()
+		{
+			Console.WriteLine("name: " + name);
+			Console.WriteLine("age: " + age);
+			Console.WriteLine("happiness: " + happiness);
+		}
 	}
 
 	class MainClass
@@ -16,7 +23,7 @@ namespace FirstConsoleProject
 		{
 			//classes
 			Animal dog = new Animal();
-			Console.WriteLine(dog.name);
+			dog.Print();
 
 			Console.ReadKey();
 		}
