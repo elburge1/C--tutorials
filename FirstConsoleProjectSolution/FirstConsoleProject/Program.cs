@@ -26,6 +26,7 @@ namespace FirstConsoleProject
 			public void Bark()
 			{
 				Console.WriteLine("Woof");
+				base.happiness += 0.1f;
 			}
 		}
 
@@ -48,6 +49,7 @@ namespace FirstConsoleProject
 			spotty.spotCount = 25;
 			spotty.PrintBase();
 			spotty.Bark();
+			spotty.PrintBase();
 
 			Console.ReadKey();
 		}
