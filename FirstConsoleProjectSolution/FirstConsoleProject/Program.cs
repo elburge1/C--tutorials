@@ -51,6 +51,14 @@ namespace FirstConsoleProject
 			spotty.Bark();
 			spotty.PrintBase();
 
+			Cat heisenberg = new Cat();
+			heisenberg.name = "Heisenberg";
+			heisenberg.age = 13;
+			heisenberg.happiness = 0.3f;
+			heisenberg.cuteness = 0.4f;
+			heisenberg.PrintBase();
+			heisenberg.Meow();
+
 			Console.ReadKey();
 		}
 	}
