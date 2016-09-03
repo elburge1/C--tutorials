@@ -5,6 +5,7 @@ namespace FirstConsoleProject
 {
 	class MainClass
 	{
+		enum Breed { Bulldog, Boxer, Chihuahua, Shepherd };
 
 		class Animal
 		{
@@ -15,9 +16,9 @@ namespace FirstConsoleProject
 
 		class Dog : Animal
 		{
-			public string breed;
+			public Breed breed;
 
-			public Dog(string _name, int _age, float _happiness, string _breed)
+			public Dog(string _name, int _age, float _happiness, Breed _breed)
 			{
 				name = _name;
 				age = _age;
@@ -36,7 +37,7 @@ namespace FirstConsoleProject
 		}
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
-			Dog hulk = new Dog("Hulk", 2, 0.7f, "Boxer");
+			Dog hulk = new Dog("Hulk", 2, 0.7f, Breed.Boxer);
 			hulk.Print();
 
 			Console.ReadKey();
