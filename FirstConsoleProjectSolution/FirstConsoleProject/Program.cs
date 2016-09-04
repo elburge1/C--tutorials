@@ -14,10 +14,20 @@ namespace FirstConsoleProject
 				{
 					return _health;
 				}
-
 				set
 				{
-					_health = value;
+					if (value <= 0)
+					{
+						_health = 0;
+					}
+					else if (value >= 100)
+					{
+						_health = 100;
+					}
+					else
+					{
+						_health = value;
+					}
 				}
 			}
 		}
@@ -26,7 +36,7 @@ namespace FirstConsoleProject
 		{
 			Player tom = new Player();
 			Console.WriteLine(tom.health);
-			tom.health = 10;
+			tom.health -= 200;
 			Console.WriteLine(tom.health);
 
 			Console.ReadKey();
