@@ -7,11 +7,18 @@ namespace FirstConsoleProject
 	{
 		class Player
 		{
-			public int health = 100;
+			private int _health = 100;
+			public int health 
+			{ 
+				get
+				{
+					return _health;
+				}
+			}
 
 			public void Damage(int _dmg)
 			{
-				health -= _dmg;
+				_health -= _dmg;
 			}
 		}
 
