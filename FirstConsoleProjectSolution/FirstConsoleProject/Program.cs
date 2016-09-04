@@ -14,18 +14,19 @@ namespace FirstConsoleProject
 				{
 					return _health;
 				}
-			}
 
-			public void Damage(int _dmg)
-			{
-				_health -= _dmg;
+				set
+				{
+					_health = value;
+				}
 			}
 		}
 
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
 			Player tom = new Player();
-			tom.Damage(10);
+			Console.WriteLine(tom.health);
+			tom.health = 10;
 			Console.WriteLine(tom.health);
 
 			Console.ReadKey();
