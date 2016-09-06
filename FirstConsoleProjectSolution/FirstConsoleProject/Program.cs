@@ -14,15 +14,25 @@ namespace FirstConsoleProject
 			void Sell();
 		}
 
-		class Sword : IItem
+		interface IDamageable
+		{
+			int durability { get; set;}
+
+			void TakeDamage(int _amount);
+		}
+
+		class Sword : IItem, IDamageable
 		{
 			public string name { get; set;}
 			public int goldValue { get; set;}
+
+			public int durability { get; set; }
 
 			public Sword(string _name)
 			{
 				name = _name;
 				goldValue = 100;
+				durability = 50;
 			}
 
 			public void Equip()
@@ -33,12 +43,18 @@ namespace FirstConsoleProject
 			{
 				Console.WriteLine(name + " Sold for " + goldValue + " imaginary dollars.");
 			}
+			public void TakeDamage(int _dmg)
+			{
+				durability -= _dmg;
+				Console.WriteLine(name + " damaged by " + _dmg + ". It now has a durability of " + durability); 
+			}
 		}
 
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
 			Sword sword = new Sword("Sword of Destiny");
 			sword.Equip();
+			sword.TakeDamage(20);
 			sword.Sell();
 
 			Console.ReadKey();
