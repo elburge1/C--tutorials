@@ -14,7 +14,7 @@ namespace FirstConsoleProject
 			void Sell();
 		}
 
-		class Sword
+		class Sword : IItem
 		{
 			public string name { get; set;}
 			public int goldValue { get; set;}
@@ -24,11 +24,22 @@ namespace FirstConsoleProject
 				name = _name;
 				goldValue = 100;
 			}
+
+			public void Equip()
+			{
+				Console.WriteLine(name + " equipped");
+			}
+			public void Sell()
+			{
+				Console.WriteLine(name + " Sold for " + goldValue + " imaginary dollars.");
+			}
 		}
 
 		public static void Main(string[] args) //this is a method called 'Main'. It is called when the program starts
 		{
-
+			Sword sword = new Sword("Sword of Destiny");
+			sword.Equip();
+			sword.Sell();
 
 			Console.ReadKey();
 		}
