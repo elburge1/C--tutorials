@@ -21,7 +21,12 @@ namespace FirstConsoleProject
 			void TakeDamage(int _amount);
 		}
 
-		class Sword : IItem, IDamageable
+		interface IPartofquest
+		{
+			void TurnIn();
+		}
+
+		class Sword : IItem, IDamageable, IPartofquest
 		{
 			public string name { get; set;}
 			public int goldValue { get; set;}
@@ -47,6 +52,10 @@ namespace FirstConsoleProject
 			{
 				durability -= _dmg;
 				Console.WriteLine(name + " damaged by " + _dmg + ". It now has a durability of " + durability); 
+			}
+			public void TurnIn()
+			{
+				Console.WriteLine(name + " turned in!");
 			}
 		}
 
@@ -90,6 +99,21 @@ namespace FirstConsoleProject
 			axe.Equip();
 			axe.TakeDamage(10);
 			axe.Sell();
+
+			//create an inventory
+			IItem[] inventory = new IItem[2];
+			inventory[0] = sword;
+			inventory[1] = axe;
+
+			//Loop through to turn in quest items
+			for (int i = 0; i < inventory.Length; i++)
+			{
+				IPartofquest questItem = inventory[i] as IPartofquest;
+				if (questItem != null)
+				{
+					questItem.TurnIn();
+				}
+			}
 
 			Console.ReadKey();
 		}
